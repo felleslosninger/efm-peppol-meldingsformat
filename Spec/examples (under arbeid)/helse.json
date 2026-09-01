@@ -1,0 +1,18 @@
+{
+    "helse": {
+        "avsender": {
+            "virksomhet": "0192:991825827",
+            "finkorna": "økonomi"
+        },
+        "mottaker": {
+            "virksomhet": "0192:991825827",
+            "finkorna": "økonomi"
+        },
+        "sikkerhetsnivaa": 3,
+        "virkningstidspunkt": "2022-03-16T00:00:00+01:00",
+        "aapningskvittering": false,
+        "ikkesensitivtittel": "Test",
+        "spraak": "no",
+        "varsler": {}
+    }
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest
+  xmlns="http://begrep.difi.no/sdp/schema_v10"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://begrep.difi.no/sdp/schema_v10 ../../../schema/manifest.xsd ">
+
+  <hoveddokument href="dialogmelding.xml" mime="application/xml">
+    <tittel lang="no">Dialogmelding til fastlege</tittel>
+  </hoveddokument>
+
+  <vedlegg href="KreftsvultsTilFødselsnr123.png" mime="image/png">
+    <tittel lang="no">KreftsvultsTilFødselsnr123</tittel>
+  </vedlegg>
+
+</manifest>

@@ -1,0 +1,26 @@
+
+{
+    "$schema": "../../schema/jsonforjwt.json",
+    "sender": {
+        "address": "0192:123456789"
+    }
+    "receiver": {
+        "address": "0192:314240979",
+        "internalAddress": {
+            "type": "HER-id",
+            "value": "1234"
+        }
+    },
+    "metadata": {
+        "channel": "Public360",
+        "encryption": "AES256",
+        "priority": "normal",
+        "securityLevel": 4
+    },
+    "asicEntryPoint": "manifest.xml",
+    "maskinportenToken": "1223",
+    "documentPackageFingerprint": {
+        "digestMethod": "http://www.w3.org/2001/04/xmlenc#sha256",
+        "digestValue": "BDjOg00Iiv5eQGm5adwGnW8ktSfvQ/0jYvgkYCRnryw="
+    }
+}

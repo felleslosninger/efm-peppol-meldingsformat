@@ -1,0 +1,25 @@
+{
+    "messageToBusiness": {
+        "sender": {
+            "name": "STERK ULYDIG HUND DA",
+            "id": "0192:311780735",
+            "reference": "Oppdragsnr: 123 / Søknadsnr: 456",
+            "granular": "bygg og anlegg"
+        },
+        "receiver": {
+            "name": "KUL SLITEN TIGER AS",
+            "id": "0192:314240979",
+            "reference": "Trengs denne?",
+            "granular": "hr"
+        },
+        "message": {
+            "title": "HR klage",
+            "summary": "Dette er en klage på sjefen deres",
+            "messageBody": "Sjefen deres er en dust"
+        },
+        "notification": {
+            "text": "Du har fått en ny taushetsbelagt melding fra $reportee$.",
+            "channel": "EMAIL_AND_SMS"
+        }
+    }
+}

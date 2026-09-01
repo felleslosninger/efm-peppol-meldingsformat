@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns1:manifest xmlns:ns1="urn:oasis:names:tc:opendocument:xmlns:manifest:1.0">
+    <ns1:file-entry ns1:full-path="/" ns1:media-type="application/vnd.etsi.asic-e+zip"/>
+    <ns1:file-entry ns1:full-path="manifest.xml" ns1:media-type="application/xml"/>
+    <ns1:file-entry ns1:full-path="brev.pdf" ns1:media-type="application/pdf"/>
+</ns1:manifest>
