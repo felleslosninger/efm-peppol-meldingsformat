@@ -1,0 +1,83 @@
+{
+  "standardBusinessDocument": {
+    "standardBusinessDocumentHeader": {
+      "businessScope": {
+        "scope": [
+          {
+            "identifier": "urn:fdc:digdir.no:2020:profile:egovernment:innbyggerpost:digital:ver1.0",
+            "instanceIdentifier": "92a84d48-979e-462a-ae42-5e53d9697507",
+            "scopeInformation": [
+              {
+                "expectedResponseDateTime": "2026-09-02T14:54:23.251316+02:00"
+              }
+            ],
+            "type": "ConversationId"
+          }
+        ]
+      },
+      "documentIdentification": {
+        "creationDateAndTime": "2026-09-01T14:54:24.965726+02:00",
+        "instanceIdentifier": "438afeb8-077a-493f-a2e2-024216da83e8",
+        "standard": "urn:fdc:digdir.no:2020:innbyggerpost:xsd::innbyggerpost##urn:fdc:digdir.no:2020:innbyggerpost:schema:digital::1.0",
+        "type": "digital",
+        "typeVersion": "1.0"
+      },
+      "headerVersion": "1.0",
+      "receiver": [
+        {
+          "identifier": {
+            "authority": "iso6523-actorid-upis",
+            "value": "0192:984661185"
+          }
+        }
+      ],
+      "sender": [
+        {
+          "identifier": {
+            "authority": "iso6523-actorid-upis",
+            "value": "0192:991825827"
+          }
+        }
+      ]
+    },
+    "digital": {
+      "aapningskvittering": false,
+      "avsender": {
+        "virksomhetsidentifikator": {
+          "authority": "iso6523-actorid-upis",
+          "value": "0192:991825827"
+        }
+      },
+      "dokumentpakkefingeravtrykk": {
+        "digestMethod": "http://www.w3.org/2001/04/xmlenc#sha256",
+        "digestValue": "pKVhfhQg7xB0/nF6IYlCSRcSNl7v+YmXNwzb0XgIYPg="
+      },
+      "ikkesensitivtittel": "tittel",
+      "maskinportentoken": "eyJraWQiOiJDejM5QnllTkR0R0VPbjNxZlQwaF9mcGpPQTZOVlplR3dyZTBLWHRRZmRBIiwiYWxnIjoiUlMyNTYifQ.eyJzY29wZSI6ImRpZ2l0YWxwb3N0aW5uYnlnZ2VyOnNlbmQiLCJpc3MiOiJodHRwczovL3Rlc3QubWFza2lucG9ydGVuLm5vLyIsImNsaWVudF9hbXIiOiJ2aXJrc29taGV0c3NlcnRpZmlrYXQiLCJ0b2tlbl90eXBlIjoiQmVhcmVyIiwiZXhwIjoxNzg4MjY3Mzg1LCJpYXQiOjE3ODgyNjcyNjUsImNsaWVudF9pZCI6Ik1PVkVfSVBfOTkxODI1ODI3IiwianRpIjoiclhfUjBKODNfOXRNZ01HZ19QdW9ENTIya05pdTFDeGd0NFRsMVRiME9pUSIsImNvbnN1bWVyIjp7ImF1dGhvcml0eSI6ImlzbzY1MjMtYWN0b3JpZC11cGlzIiwiSUQiOiIwMTkyOjk5MTgyNTgyNyJ9fQ.zKDJX1nFhr5WMaGiHlPPPOw0TBIv_Ap30RdlUIuorhSQJanZSaBIW2GEC2CrVOtgBK8jzFl-ilg81zG2UOnrnGMf9T-t4emM58k9s5WoceLjCvp3rzD2Kv3j87YsZ7iWKy40eo89WfGe2ndC1-uzhlmqNOxg9NUSzcZj2vB3KR9K8fTXbdIpuidElkIWO32z8lo8OlBkkvc7-gAVOF5dKetyXmyZuRpoT3v_nqu5umaxXjjHHRhCqPO5pLRgFawrFJaeaU393FqpE69Q3fTpRzUHRMzW95W_VVagSU8gNTOpcYvQoSEkDWm1AJC7f9ABvx70wNsdAarkHaj4Q4phT75ZpOnc_gZpuXpCR5ICu4XkYeFzsNwKh_ptSjpPon1a5ys4AUur2IXWh_CIFlrfSzucArHMr1hW0E4E6kAdPNQM0ywnSXDe1UnyixonY9PoLxsqvQyxF9MHokfU36Uzgo_KDSJO0Mx0LC6RHl9xCnMqioHgEnHr4A0t0hXz_bWY",
+      "mottaker": {
+        "postkasseadresse": "test.testesen#8HC7"
+      },
+      "sikkerhetsnivaa": 3,
+      "spraak": "NO",
+      "varsler": {
+        "epostvarsel": {
+          "epostadresse": "test1@digdir.no",
+          "repetisjoner": [
+            0,
+            7
+          ],
+          "varslingstekst": "ePost varsel"
+        },
+        "smsvarsel": {
+          "mobiltelefonnummer": "+4791739230",
+          "repetisjoner": [
+            0,
+            7
+          ],
+          "varslingstekst": "SMS varsel"
+        }
+      },
+      "virkningstidspunkt": "2026-09-01T00:00:00+02:00"
+    }
+  }
+}

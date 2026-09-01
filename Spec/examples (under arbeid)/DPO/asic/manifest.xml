@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest
+  xmlns="http://begrep.difi.no/sdp/schema_v10"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://begrep.difi.no/sdp/schema_v10 ../../../schema/manifest.xsd ">
+
+  <hoveddokument href="hoveddokument.txt" mime="application/plain">
+    <tittel lang="no">Vedtak</tittel>
+  </hoveddokument>
+
+  <vedlegg href="info.html" mime="text/html">
+    <tittel lang="no">informasjon</tittel>
+  </vedlegg>
+
+  <vedlegg href="journal.txt" mime="text/plain">
+    <tittel lang="no">journal</tittel>
+  </vedlegg>
+
+  <vedlegg href="bilde.png" mime="image/png">
+    <tittel lang="no">bilde</tittel>
+  </vedlegg>
+
+</manifest>

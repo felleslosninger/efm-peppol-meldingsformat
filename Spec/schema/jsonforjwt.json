@@ -1,0 +1,122 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://digdir.no/schemas/melding.schema.json",
+    "title": "Json that is going into the JWT in AdministrativeMessage",
+    "description": "Konvolutt/metadata for meldingsutveksling mellom aksesspunkt (avsender, mottaker, metadata og dokumentpakkefingeravtrykk). Kun ting som er nødvendig for å rute meldingen",
+    "type": "object",
+    "required": ["sender", "receiver", "metadata", "dokumentpakkefingeravtrykk"],
+    "additionalProperties": false,
+    "properties": {
+        "$schema": {
+            "description": "JSON Schema som beskriver formatet på denne JSON-en.",
+            "type": "string"
+        },
+      "sender": { "$ref": "#/$defs/part" },
+      "receiver": { "$ref": "#/$defs/part" },
+      "metadata": { "$ref": "#/$defs/metadata" },
+      "asicEntryPoint": {
+        "description": "Filsti til manifestet i dokumentpakken (ASIC-en). F.eks manifest.xml",
+        "type": "string",
+        "minLength": 1
+      },
+      "maskinportenToken": {
+        "description": "Maskinporten-token (JWT / access token) som autentiserer avsender.",
+        "type": "string",
+        "minLength": 1
+      },
+      "documentPackageFingerprint": { "$ref": "#/$defs/fingerprint" }
+    },
+    "$defs": {
+      "part": {
+        "title": "Part",
+        "description": "Avsender eller mottaker av meldingen.",
+        "type": "object",
+        "required": ["address"],
+        "additionalProperties": false,
+        "properties": {
+          "address": {
+            "description": "<ICD>:<identifikator>, f.eks. 0192:311780735",
+            "type": "string",
+            "pattern": "0192:[0-9]{9}$",
+            "examples": ["0192:311780735"]
+          },
+          "internalAddress": {
+            "description": "Valgfri intern adressering hos parten, f.eks. avdeling eller seksjon.",
+            "type": "object",
+            "required": ["type", "value"],
+            "additionalProperties": false,
+            "properties": {
+              "type": {
+                "description": "Hva den interne adressen betegner.",
+                "type": "string",
+                "minLength": 1,
+                "enum": ["avdeling", "seksjon", "enhet", "HER-id", "fødselsnr"]
+              },
+              "value": {
+                "description": "Verdien av den interne adressen.",
+                "type": "string",
+                "minLength": 1,
+                "examples": ["bygg og anlegg", "HR", "1235"]
+              }
+            }
+          }
+        }
+      },
+      "metadata": {
+        "title": "Meldingsmetadata",
+        "type": "object",
+        "required": ["priority", "securityLevel"],
+        "additionalProperties": false,
+        "properties": {
+          "channel": {
+            "description": "Identifiserer hvilket avsendersystem/kanal meldingen kommer fra, slik at en virksomhet kan ha flere sendende systemer bak samme aksesspunkt. Brukt i blant annet DPI.",
+            "type": "string",
+            "minLength": 1
+          },
+          "encryption": {
+            "description": "Krypteringsalgoritme brukt på dokumentpakken. Utelates, eller settes til \"none\", dersom innholdet ikke er kryptert.",
+            "type": "string",
+            "enum": ["AES256", "none"],
+            "default": "none"
+          },
+          "priority": {
+            "description": "Prioritet for behandling av meldingen.",
+            "type": "string",
+            "enum": ["normal", "high"]
+          },
+          "securityLevel": {
+            "description": "Påkrevd sikkerhetsnivå (eIDAS/ID-porten-nivå) for å kunne åpne meldingen.",
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 4
+          }
+        }
+      },
+      "fingerprint": {
+        "title": "Dokumentpakkefingeravtrykk",
+        "description": "Kryptografisk sjekksum av dokumentpakken (ASIC-en).",
+        "type": "object",
+        "required": ["digestMethod", "digestValue"],
+        "additionalProperties": false,
+        "properties": {
+          "digestMethod": {
+            "description": "URI som identifiserer hash-algoritmen.",
+            "type": "string",
+            "format": "uri",
+            "enum": [
+              "http://www.w3.org/2001/04/xmlenc#sha256",
+              "http://www.w3.org/2001/04/xmldsig-more#sha384",
+              "http://www.w3.org/2001/04/xmlenc#sha512"
+            ]
+          },
+          "digestValue": {
+            "description": "Base64-kodet hash-verdi.",
+            "type": "string",
+            "contentEncoding": "base64",
+            "pattern": "^[A-Za-z0-9+/]+={0,2}$",
+            "examples": ["BDjOg00Iiv5eQGm5adwGnW8ktSfvQ/0jYvgkYCRnryw="]
+          }
+        }
+      }
+    }
+  }

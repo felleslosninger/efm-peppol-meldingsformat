@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardBusinessDocument xmlns="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader">
+    <StandardBusinessDocumentHeader>
+        <HeaderVersion>1.0</HeaderVersion>
+        <Sender>
+            <Identifier Authority="iso6523-actorid-upis">0192:311780735</Identifier>
+        </Sender>
+        <Receiver>
+            <Identifier Authority="iso6523-actorid-upis">0192:314240979</Identifier>
+        </Receiver>
+        <DocumentIdentification>
+            <Standard>urn:fdc:digdir.no:2026:egovernment</Standard>
+            <TypeVersion>1.0</TypeVersion>
+            <InstanceIdentifier>{documentUUID}</InstanceIdentifier>
+            <Type>AdministrativeMessage</Type>
+            <CreationDateAndTime>2026-05-02T13:07:15.427+02:00</CreationDateAndTime>
+        </DocumentIdentification>
+        <BusinessScope>
+            <Scope>
+                <Type>ConversationId</Type>
+                <InstanceIdentifier>{conversationUUID}</InstanceIdentifier>
+            </Scope>
+            <Scope>
+                <Type>DOCUMENTID</Type>
+                <InstanceIdentifier>urn:fdc:digdir.no:2026:egovernment::AdministrativeMessage##urn:fdc:digdir.no:2026:egovernment:health-message:1.0</InstanceIdentifier>
+                <Identifier>busdox-docid-qns</Identifier>
+            </Scope>
+            <Scope>
+                <Type>PROCESSID</Type>
+                <InstanceIdentifier>urn:fdc:digdir.no:2026:egovernment:health-exchange:1.0</InstanceIdentifier>
+                <Identifier>cenbii-procid-ubl</Identifier>
+            </Scope>
+            <Scope>
+                <Type>COUNTRY_C1</Type>
+                <InstanceIdentifier>NO</InstanceIdentifier>
+            </Scope>
+        </BusinessScope>
+    </StandardBusinessDocumentHeader>
+    <AdministrativeMessage xmlns="urn:fdc:digdir.no:2026:egovernment">
+        <SignedMessageHeader>{jwt}</SignedMessageHeader> 
+        <DocumentPackage>{asic}</DocumentPackage>
+    </AdministrativeMessage>
+</StandardBusinessDocument>
