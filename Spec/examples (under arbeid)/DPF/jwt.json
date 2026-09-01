@@ -1,6 +1,6 @@
 
 {
-    "$schema": "../schema/jsonforjwt.json",
+    "$schema": "../../schema/jsonforjwt.json",
     "sender": {
         "address": "0192:311780735",
         "internalAddress": {

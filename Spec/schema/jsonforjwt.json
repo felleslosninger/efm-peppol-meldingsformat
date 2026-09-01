@@ -4,7 +4,7 @@
     "title": "Json that is going into the JWT in AdministrativeMessage",
     "description": "Konvolutt/metadata for meldingsutveksling mellom aksesspunkt (avsender, mottaker, metadata og dokumentpakkefingeravtrykk). Kun ting som er nødvendig for å rute meldingen",
     "type": "object",
-    "required": ["sender", "receiver", "metadata", "dokumentpakkefingeravtrykk"],
+    "required": ["sender", "receiver", "metadata", "documentPackageFingerprint"],
     "additionalProperties": false,
     "properties": {
         "$schema": {
@@ -37,7 +37,7 @@
           "address": {
             "description": "<ICD>:<identifikator>, f.eks. 0192:311780735",
             "type": "string",
-            "pattern": "0192:[0-9]{9}$",
+            "pattern": "^0192:[0-9]{9}$",
             "examples": ["0192:311780735"]
           },
           "internalAddress": {
