@@ -1,0 +1,55 @@
+# ==========================================
+# Claude Cowork & Anthropic Agent Configuration
+# ==========================================
+# Exclude sensitive local configuration files (tokens, API keys, credentials)
+.claude/config.json
+.claude/secrets.*
+.env
+.env.*
+!.env.example
+
+# Exclude local workspace metadata and session histories that shouldn't be shared
+.claude/history/
+.claude/sessions/
+.claude/cache/
+
+# Exclude temporarily fuse user filesystem files
+.fuse_hidden*
+
+# ==========================================
+# Operating System Files
+# ==========================================
+# macOS junk
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows junk
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+[Dd]ownloads/
+$RECYCLE.BIN/
+._*
+
+# ==========================================
+# Common Office & Document Temps (if Claude edits Docs/Excel)
+# ==========================================
+# Ignore temporary lock files created by Word/Excel when open
+~$*.docx
+~$*.xlsx
+~$*.pptx
+*.tmp
+
+# ==========================================
+# Node / Python (If using custom tool scripts)
+# ==========================================
+node_modules/
+npm-debug.log*
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/
