@@ -1,0 +1,27 @@
+{
+    "$schema": "../../../../schema/jsonforjwt.json",
+    "sender": {
+        "address": "0192:964338531",
+        "internalAddress": {
+            "type": "avdeling",
+            "value": "åsane"
+        }
+    },
+    "receiver": {
+        "address": "0192:991825827",
+        "internalAddress": {
+            "type": "seksjon",
+            "value": "HR"
+        }
+    },
+    "metadata": {
+        "encryption": "AES256",
+        "securityLevel": 4
+    },
+    "asicEntryPoint": "manifest.xml",
+    "maskinportenToken": "1223",
+    "documentPackageFingerprint": {
+        "digestMethod": "http://www.w3.org/2001/04/xmlenc#sha256",
+        "digestValue": "BDjOg00Iiv5eQGm5adwGnW8ktSfvQ/0jYvgkYCRnryw="
+    }
+}
