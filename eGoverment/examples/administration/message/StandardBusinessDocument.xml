@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardBusinessDocument xmlns="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader">
+    <StandardBusinessDocumentHeader>
+        <HeaderVersion>1.0</HeaderVersion>
+        <Sender>
+            <Identifier Authority="iso6523-actorid-upis">0192:964338531</Identifier> // Bergen kommune
+        </Sender>
+        <Receiver>
+            <Identifier Authority="iso6523-actorid-upis">0192:991825827</Identifier> // Digitaliseringsdirektoratet
+        </Receiver>
+        ...
+    </StandardBusinessDocumentHeader>
+    <Egovernment xmlns="urn:fdc:digdir.no:2026:egovernment">
+        <SignedMessageHeader>{jwt}</SignedMessageHeader> 
+        <DocumentPackage>{asic}</DocumentPackage>
+    </Egovernment>
+</StandardBusinessDocument>

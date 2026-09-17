@@ -1,0 +1,3 @@
+Standard sending
+
+Bergen kommune 964338531 sender melding til Digitaliseringsdirektoratet 991825827
